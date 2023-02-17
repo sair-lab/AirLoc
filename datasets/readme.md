@@ -15,7 +15,7 @@ Base Directory/
 
 ```
 
-1. Superpoint extraction (Modify superpoint_extraction_airloc.yaml)
+Superpoint extraction (Modify superpoint_extraction_airloc.yaml)
 
         
 
@@ -23,10 +23,11 @@ Base Directory/
 python superpoint_extraction_airloc.py -c config/superpoint_extraction_airloc.yaml
 ```
 
-1. Preprocessing does the following
-    1. Removes bad image (Having very less number of object, black outs and all) 
-    2. Makes a .pkl file per dataset into specified dataset directory
-    
-    ```jsx
-    python datasets/preprocess_reloc.py -c config/preprocess_reloc.yaml
-    ```
+Preprocessing does the following
+
+1. Removes bad image (Having very less number of object, black outs and all) 
+2. Makes a .pkl file per dataset into specified dataset directory
+
+```jsx
+python datasets/preprocess_reloc.py -c config/preprocess_reloc.yaml
+```
