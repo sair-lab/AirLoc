@@ -1,0 +1,40 @@
+base_dir: '/home/aryan/Airloc_Public/data_collection/x-view/data'
+log_dir: './experiments/train_airloc' # Logging directory
+# scenes: ['8WUmhLawc2A', 'i5noydFURQK', 'jh4fc5c5qoQ', 'mJXqzFtmKg4', 'qoiz87JEwZ2', 'wc2JMjhGNzB', 'WYY7iVyf5p8', 'X7HyMhZNoso', 'YFuZgdQ5vWj', 'yqstnuAEVhm', 'VzqfbhrpDEA']
+scenes: ["RPmz2sHmrrY",  "S9hNv5qa7GM",  "ULsKaCPVFJR" ] 
+method: 'airloc' # [airloc,netvlad_mean,airloc_without_edge,gcn,gcn_mean,netvlad]
+netvlad_model_path: '../models/netvlad_model.pth'
+graph_model_path: "../models/gcn_model.pth"
+airloc_model_path: '../models/airloc_geometry_model.pth'
+save_dir: '.results/results_m'
+batch_size: 16
+num_gpu: [0]
+public_model: 0
+ap_thres: 0.1
+ap_wght: 0.909
+database:
+  config_path: ./config/generate_reference.yaml
+  db_raw_path: /home/aryan/Airloc_Public/data_collection/x-view 
+  db_path: "/home/aryan/Airloc_Public/data_collection/database"
+  K: 1
+model:
+  airloc:
+    descriptor_dim: 256
+    hidden_dim: 512
+    nout: 1024
+    graph_model: gat
+    points_encoder_dims: [12, 32, 64, 128, 256]
+    dropout: 0.5 #0.5
+    alpha: 0.2
+    nheads: 8 #8
+  netvlad:
+    descriptor_dim: 256
+    vlad_numc: 32
+  gcn:
+    descriptor_dim: 256
+    points_encoder_dims: [2, 4, 8, 16]
+    hidden_dim: 512
+    dropout: 0
+    alpha: 0.2
+    nheads: 4
+    nout: 2048

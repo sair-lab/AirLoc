@@ -1,0 +1,20 @@
+base_dir: "/home/aryan/Airloc_Public/data_collection/x-view"
+datasets: ["mp3d"]
+pkl_path: "/home/aryan/Airloc_Public/data_collection//x-view/data"
+object_location: True 
+filter_images: True
+save_pkl: True
+split: False
+split_size: 0.8
+camera:
+  fx: 960
+  fy: 960
+  cx: 960.5
+  cy: 540.4
+  width: 1920
+  height: 1080
+good_image:
+  occlusion_ratio: 0.1
+  min_objects: 3
+
+
