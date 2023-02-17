@@ -1,14 +1,11 @@
 # AirLoc: Object Based Indoor Relocalisation
 
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-yellow.svg)](./LICENSE)
-[![stars](https://img.shields.io/github/stars/Nik-V9/AirObject?style=social)](https://github.com/Nik-V9/AirObject/stargazers)
 [![Air Series](https://img.shields.io/badge/collection-Air%20Series-b31b1b)](https://chenwang.site/airseries/)
-[![arXiv](https://img.shields.io/badge/arXiv-2111.15150-b31b1b.svg)](https://arxiv.org/abs/2111.15150)
-[![IEEE/CVF CVPR 2022](https://img.shields.io/badge/-IEEE/CVF%20CVPR%202022-blue)](https://cvpr2022.thecvf.com/)
 
 ## Introduction
 
-Coming Soon ..
+Indoor relocalization is vital for both robotic tasks such as autonomous exploration and civil applications such as navigation with a cell phone in a shopping mall. Some previous approaches adopt geometrical information such as key-point features or local textures to carry out indoor relocalization, but they either easily fail in environments with visually similar scenes or require many database images. Inspired by the fact that humans often remember places by recognizing unique landmarks, we resort to objects, which are more informative than geometry elements. In this work, we propose a simple yet effective object-based indoor relocalization approach, dubbed AirLoc. To overcome the critical challenges including the ob- ject reidentification and remembering object relationships, we extract object-wise appearance embedding and inter-object geo- metric relationship. The geometry and appearance features are integrated to generate cumulative scene features. This results in a robust, accurate, and portable indoor relocalization system, which outperforms the state-of-the-art methods in room-level relocalization by 12% of PR-AUC and 8% of accuracy. Besides, AirLoc shows robustness in challenges like severe occlusion, perceptual aliasing, viewpoint shift, deformation, and scale transformation.
 
 
 ## Dependencies
@@ -28,11 +25,11 @@ pip install torchvision==0.9.0 tensorboard
 
 ## Data
 
-For Data Loading, we use dataloaders present in the datasets folder.
+For Data Loading, we use dataloaders present in the datasets folder. The dataloader support preprocessed pkl files from the Reloc110 scenes.
 
-Drive folder for data coming soom ..
+Please download data.zip (Preprocessed Queries) and database_raw.zip (Database)
 
-
+To preprocess dataset from scratch please refer to ..
 
 ## Pre-trained Models for Inference
 
@@ -40,48 +37,34 @@ For inference, please download the models.zip file:
 
 * [Pre-trained Models](https://mega.nz/file/IgBVDQrD#qxdB2hNazSTbV1_QdQwO2AamWveCsBTk3AGieZ8jmDQ)
 
-## SuperPoint Features Extraction
+## Indoor Relocalization Evaluation
 
-We first start by pre-extracting SuperPoint features for all the images. Please modify the `superpoint_extraction_Airloc.yaml` config file to extract SuperPoint Features for different datasets:
+### Accuracy
+Please modify the eval_Airloc.yaml config file to test for different methods and datasets.
 
-```sh
-python './Airloc/superpoint_extraction_airloc.py' -c './Airloc/config/superpoint_extraction_Airloc.yaml' -g 1
+We save the preprocessed dataset at db_path in the first run to save the computation. 
+```
+python eval_airloc.py -c config/eval_Airloc.yaml
 ```
 
+### PR-AUC
+Please modify the eval_Airloc_prauc.yaml config file to test for different methods and datasets.
+
+```
+python eval_airloc_prauc.py -c config/eval_Airloc.yaml
+```
 
 ## Training
-To preprocess the dataset:
+To train AirLoc Geometry Module: (Please refer to train_airloc.yaml)
 
-```sh
-python './datasets/preprocess_with_depth.py' -c './config/preprocess_mp3d.yaml'
+```
+python train/train_airloc_geometry.py -c config/train_airloc.yaml
 ```
 
-To train Graph Attention Encoder: (Please refer to `train_gcn.yaml`)
+To train NetVLAD: (Please refer to train_netvlad.yaml)
 
-```sh
-python './train/train_airloc_v2.py' -c './config/train_airloc.yaml' -g 1
+```
+python './train/train_netvlad.py' -c './config/train_netvlad.yaml'
 ```
 
-To train NetVLAD: (Please refer to `train_netvlad.yaml`)
-
-```sh
-python './train/train_netvlad.py' -c './config/train_netvlad.yaml' -g 1
-```
-
-
-To train AirObject: (Please refer to `train_airobj.yaml`)
-
-```sh
-python './train/train_airobj.py' -c './config/train_airobj.yaml' -g 1
-```
-
-## Reference Dataset Generation:
-```sh
-python 'generate_reference.py' -c './config/generate_reference.yaml'
-```
-
-## Evaluation:
-```sh
-python 'eval_airloc.py' -c './config/eval_Airloc.yaml' 
-```
 
