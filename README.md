@@ -31,6 +31,7 @@ Please download data.zip (Preprocessed Queries) and database_raw.zip (Database)
 * [Dataset](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
 
 To preprocess dataset from scratch please refer to 
+* [](https://github.com/aryanmangal769/AirLoc-Object-Based-Inddor-Relocalization/blob/main/datasets/readme.md)
 
 ## Pre-trained Models for Inference
 
