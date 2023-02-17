@@ -28,14 +28,15 @@ pip install torchvision==0.9.0 tensorboard
 For Data Loading, we use dataloaders present in the datasets folder. The dataloader support preprocessed pkl files from the Reloc110 scenes.
 
 Please download data.zip (Preprocessed Queries) and database_raw.zip (Database)
+* [Dataset](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
 
-To preprocess dataset from scratch please refer to ..
+To preprocess dataset from scratch please refer to 
 
 ## Pre-trained Models for Inference
 
 For inference, please download the models.zip file:
 
-* [Pre-trained Models](https://mega.nz/file/IgBVDQrD#qxdB2hNazSTbV1_QdQwO2AamWveCsBTk3AGieZ8jmDQ)
+* [Pre-trained Models](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
 
 ## Indoor Relocalization Evaluation
 
