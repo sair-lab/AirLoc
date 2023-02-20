@@ -16,10 +16,10 @@ Simply run the following commands:
 git clone 
 conda create --channel conda-forge --name airloc --file ./Airloc/conda_requirements.txt
 conda activate airloc
-conda install pytorch==1.8.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
-pip install pyyaml opencv-python scipy tqdm pycocotools kornia
-# Editied this due to some error faced
-pip install torchvision==0.9.0 tensorboard
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+pip install pyyaml opencv-python scipy tqdm tensorboard
+pip install kornia
+
 
 ```
 
