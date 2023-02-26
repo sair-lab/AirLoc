@@ -14,7 +14,7 @@ Simply run the following commands:
 
 ```bash
 git clone 
-conda create --channel conda-forge --name airloc --file ./Airloc/conda_requirements.txt
+conda create --channel conda-forge --name airloc --file ./AirLoc/conda_requirements.txt
 conda activate airloc
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 pip install pyyaml opencv-python scipy tqdm tensorboard
