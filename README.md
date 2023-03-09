@@ -18,7 +18,7 @@ conda create --channel conda-forge --name airloc --file ./AirLoc/conda_requireme
 conda activate airloc
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 pip install pyyaml opencv-python scipy tqdm tensorboard
-pip install kornia
+pip install kornia==0.6.5
 
 
 ```
