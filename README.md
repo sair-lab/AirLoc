@@ -70,6 +70,8 @@ Expected directory structure:
 
 ### Accuracy
 Please modify the eval_Airloc.yaml config file to test for different methods and datasets.
+* method: The method you want to generate test results
+* scenes: The scneces(Reloc110) you want to get test results for
 
 * base_dir: path to data folder
 * db_raw_path: path to database_raw folder
