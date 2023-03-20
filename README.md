@@ -31,6 +31,7 @@ Please download data.zip (Preprocessed Queries) and database_raw.zip (Database)
 * [Dataset](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
 
 Note: Data preprocessing is not required if you download preprocessed dataset from above link
+
 To preprocess dataset from scratch please refer to 
    * [Preprocessing](https://github.com/aryanmangal769/AirLoc-Object-Based-Inddor-Relocalization/blob/main/datasets/readme.md)
  
@@ -73,9 +74,9 @@ Expected directory structure:
 ### Accuracy
 Please modify the eval_Airloc.yaml config file to test for different methods and datasets.
 
-base_dir: path to data folder
-db_raw_path: path to database_raw folder
-db_path: empty folder for saving preprocessed database
+* base_dir: path to data folder
+* db_raw_path: path to database_raw folder
+* db_path: empty folder for saving preprocessed database
 
 We save the preprocessed dataset at db_path in the first run to save time in further runs. 
 ```
