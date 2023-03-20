@@ -2,11 +2,11 @@ base_dir: '/home/aryan/Airloc_Public/data_collection/x-view/data'
 log_dir: './experiments/train_airloc' # Logging directory
 # scenes: ['8WUmhLawc2A', 'i5noydFURQK', 'jh4fc5c5qoQ', 'mJXqzFtmKg4', 'qoiz87JEwZ2', 'wc2JMjhGNzB', 'WYY7iVyf5p8', 'X7HyMhZNoso', 'YFuZgdQ5vWj', 'yqstnuAEVhm', 'VzqfbhrpDEA']
 scenes: ["RPmz2sHmrrY",  "S9hNv5qa7GM",  "ULsKaCPVFJR" ] 
-method: 'airloc' # [airloc,netvlad_mean,airloc_without_edge,gcn,gcn_mean,netvlad]
+method: 'airloc' # [airloc,netvlad_mean,airloc_without_edge,gcn,gcn_mean,netvlad] #Change this to test for different methods
 netvlad_model_path: '../models/netvlad_model.pth'
 graph_model_path: "../models/gcn_model.pth"
 airloc_model_path: '../models/airloc_geometry_model.pth'
-save_dir: '.results'
+save_dir: '.results' 
 batch_size: 16
 num_gpu: [0]
 public_model: 0
