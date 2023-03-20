@@ -31,15 +31,42 @@ Please download data.zip (Preprocessed Queries) and database_raw.zip (Database)
 * [Dataset](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
 
 Note: Data preprocessing is not required if you download preprocessed dataset from above link
-   To preprocess dataset from scratch please refer to 
+To preprocess dataset from scratch please refer to 
    * [Preprocessing](https://github.com/aryanmangal769/AirLoc-Object-Based-Inddor-Relocalization/blob/main/datasets/readme.md)
  
+
+The expected directory structure after preprocessing (or directly downloading preprocessed data):
+
+```
+data_collection/
+   data/
+      RPmz2sHmrrY.pkl
+      S9hNv5qa7GM.pkl
+            .
+            .
+   database_raw/
+      mp3d/
+         RPmz2sHmrrY/
+               rooms/
+         S9hNv5qa7GM/
+              .
+              .     
+```
 
 ## Pre-trained Models for Inference
 
 For inference, please download the models.zip file:
 
 * [Pre-trained Models](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
+
+Expected directory structure:
+
+```
+\models
+   netvlad_model.pth
+   gcn_model.pth
+         .
+```        
 
 ## Indoor Relocalization Evaluation
 
@@ -50,7 +77,7 @@ base_dir: path to data folder
 db_raw_path: path to database_raw folder
 db_path: empty folder for saving preprocessed database
 
-We save the preprocessed dataset at db_path in the first run to save the computation. 
+We save the preprocessed dataset at db_path in the first run to save time in further runs. 
 ```
 python eval_airloc.py -c config/eval_Airloc.yaml
 ```
@@ -68,11 +95,4 @@ To train AirLoc Geometry Module: (Please refer to train_airloc.yaml)
 ```
 python train/train_airloc_geometry.py -c config/train_airloc.yaml
 ```
-
-To train NetVLAD: (Please refer to train_netvlad.yaml)
-
-```
-python './train/train_netvlad.py' -c './config/train_netvlad.yaml'
-```
-
 
