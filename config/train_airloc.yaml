@@ -27,7 +27,7 @@ model:
     temporal_kernel_size: 1
     train:
       seqlen: 4
-      batch_size: 256
+      batch_size: 16
       positive_margin: 1
       negative_margin: 0.2
       lambda_d: 1
