@@ -9,6 +9,7 @@ from model.mask_rcnn.mask_rcnn import MaskRCNN
 from model.backbone.fcn import VGGNet
 from model.superpoint.vgg_like import VggLike
 from model.geometry.edge_geometry import EdgeDescriptor
+from model.graph_models.object_descriptor import ObjectDescriptor
 from model.netvlad import NetVLADDescriptor
 
 class Flatten(torch.nn.Module):
