@@ -28,7 +28,8 @@ pip install kornia==0.6.5
 For Data Loading, we use dataloaders present in the datasets folder. The dataloader support preprocessed pkl files from the Reloc110 scenes.
 
 Please download data.zip (Preprocessed Queries) and database_raw.zip (Database)
-* [Dataset](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
+* [Dataset (Small Version)](https://drive.google.com/drive/folders/1n2wz_bigMcM5l9K29bskMd1qhR2VLarH?usp=sharing)
+* [Dataset (Full Version)](https://entuedu-my.sharepoint.com/:f:/g/personal/cwang017_e_ntu_edu_sg/EqkVfge8ADpHg2uf9jJexOsBW6SZ6vpyMf-lM59vZj1xHg?e=B4yvs0)
 
 Note: Data preprocessing is not required if you download preprocessed dataset from above link. But to preprocess dataset from scratch please refer to [Preprocessing](https://github.com/aryanmangal769/AirLoc-Object-Based-Inddor-Relocalization/blob/main/datasets/readme.md)
  
