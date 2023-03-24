@@ -3,9 +3,7 @@
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-yellow.svg)](./LICENSE)
 [![Air Series](https://img.shields.io/badge/collection-Air%20Series-b31b1b)](https://chenwang.site/airseries/)
 
-## Movitation
-
-![front-page-airloc](https://user-images.githubusercontent.com/8695500/227299683-3abd8f8e-636f-416b-bf7f-1d716f53991e.png)
+[<img src="https://user-images.githubusercontent.com/8695500/227299683-3abd8f8e-636f-416b-bf7f-1d716f53991e.png" width="60%">](https://youtu.be/n6mp6KzGPgs)
 
 ## Introduction
 
@@ -107,4 +105,4 @@ python train/train_airloc_geometry.py -c config/train_airloc.yaml
 
 ## Video
 
-[<img src="https://img.youtube.com/vi/n6mp6KzGPgs/sddefault.jpg" width="100%">](https://youtu.be/n6mp6KzGPgs)
+[<img src="https://img.youtube.com/vi/n6mp6KzGPgs/hqdefault.jpg" width="100%">](https://youtu.be/n6mp6KzGPgs)
