@@ -3,8 +3,6 @@
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-yellow.svg)](./LICENSE)
 [![Air Series](https://img.shields.io/badge/collection-Air%20Series-b31b1b)](https://chenwang.site/airseries/)
 
-[<img src="https://user-images.githubusercontent.com/8695500/227299683-3abd8f8e-636f-416b-bf7f-1d716f53991e.png" width="60%">](https://youtu.be/n6mp6KzGPgs)
-
 ## Introduction
 
 Indoor relocalization is vital for both robotic tasks such as autonomous exploration and civil applications such as navigation with a cell phone in a shopping mall. Some previous approaches adopt geometrical information such as key-point features or local textures to carry out indoor relocalization, but they either easily fail in environments with visually similar scenes or require many database images. Inspired by the fact that humans often remember places by recognizing unique landmarks, we resort to objects, which are more informative than geometry elements. In this work, we propose a simple yet effective object-based indoor relocalization approach, dubbed AirLoc. To overcome the critical challenges including the object reidentification and remembering object relationships, we extract object-wise appearance embedding and inter-object geometric relationship. The geometry and appearance features are integrated to generate cumulative scene features. This results in a robust, accurate, and portable indoor relocalization system, which outperforms the state-of-the-art methods in room-level relocalization by 12% of PR-AUC and 8% of accuracy. Besides, AirLoc shows robustness in challenges like severe occlusion, perceptual aliasing, viewpoint shift, deformation, and scale transformation.
@@ -103,6 +101,6 @@ To train AirLoc Geometry Module: (Please refer to train_airloc.yaml)
 python train/train_airloc_geometry.py -c config/train_airloc.yaml
 ```
 
-## Video
+# Watch Video
 
-[<img src="https://img.youtube.com/vi/n6mp6KzGPgs/hqdefault.jpg" width="100%">](https://youtu.be/n6mp6KzGPgs)
+[<img src="https://user-images.githubusercontent.com/8695500/227299683-3abd8f8e-636f-416b-bf7f-1d716f53991e.png" width="80%">](https://youtu.be/n6mp6KzGPgs)
