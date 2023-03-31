@@ -20,9 +20,9 @@ Simply run the following commands:
 git clone https://github.com/sair-lab/AirLoc.git
 conda create --channel conda-forge --name airloc --file ./AirLoc/conda_requirements.txt
 conda activate airloc
-conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
 pip install pyyaml opencv-python scipy tqdm tensorboard
-pip install kornia==0.6.5
+pip install kornia==0.5.0
 
 
 ```
