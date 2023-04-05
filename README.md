@@ -91,7 +91,8 @@ python eval_airloc.py -c config/eval_Airloc.yaml
 Please modify the eval_Airloc_prauc.yaml config file to test for different methods and datasets.
 
 ```
-python eval_airloc_prauc.py -c config/eval_Airloc.yaml
+python eval_airloc_prauc.py -c config/eval_airloc_prauc.yaml
+
 ```
 
 ## Training
