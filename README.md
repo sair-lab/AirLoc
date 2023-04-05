@@ -105,3 +105,14 @@ python train/train_airloc_geometry.py -c config/train_airloc.yaml
 # Watch Video
 
 [<img src="https://user-images.githubusercontent.com/8695500/227299683-3abd8f8e-636f-416b-bf7f-1d716f53991e.png" width="80%">](https://youtu.be/n6mp6KzGPgs)
+
+# Puplication
+```bibtex
+@article{aryan2023airloc,
+  title = {AirLoc: Object-based Indoor Relocalization},
+  author = {Aryan and Li, Bowen and Scherer, Sebastian and Lin, Yun-Jou and Wang, Chen},
+  journal = {arXiv preprint arXiv:2304.00954},
+  year = {2023},
+}
+```
+You may also [download this paper](https://arxiv.org/abs/2304.00954).
